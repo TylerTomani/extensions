@@ -1,0 +1,49 @@
+:root {
+    --bg-primary: #201d1d;
+    --font-primary: whitesmoke;
+}
+
+.dark-mode {
+    background-color: var(--bg-primary);
+    color: var(--font-primary)
+}
+
+.dark-mode h3,.dark-mode #due_date_label{
+    color: var(--font-primary) !important;
+
+}
+.dark-mode nav#nav-section-lesson-titles {
+    background-color: var(--bg-primary)
+}
+
+.dark-mode a {
+    color: white;
+}
+
+.dark-mode,
+h4 .dark-mode p {
+    color: whitesmoke;
+}
+
+.dark-mode #nav-section-lesson-titles {
+    border-top: 1px solid whitesmoke;
+    border-bottom: 1px solid whitesmoke;
+
+}
+
+.dark-mode main>aside {
+    border-right: 1px solid whitesmoke;
+}
+.dark-mode textarea {
+    background: rgb(40,38,46,.05);
+}
+
+
+
+
+
+
+
+
+
+

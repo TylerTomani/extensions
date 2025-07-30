@@ -1,0 +1,54 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+.calendar {
+    display: flex;
+    flex-wrap: wrap;
+    width: 90%;
+    margin-top: 10%;
+    justify-content: center;
+}
+
+.month {
+    flex-basis: 30%;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 2% 0;
+    padding-left: .5%;
+    margin: 1%;
+}
+.days {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.day-header,
+.day {
+    width: 14.28%;
+    height: 30px;
+    margin-top: 2%;
+    line-height: 30px;
+    text-align: center;
+    border: 1px solid #ddd;
+    box-sizing: border-box;
+}
+
+.day-header {
+    background-color: #f0f0f0;
+    font-weight: bold;
+}
+
+.hide {
+    display: none;
+}
+
+
+.hoursDay{
+    padding: 15%;
+    /* border: 2px solid orange; */
+    order: -1;
+    flex-basis: 30%;
+
+}

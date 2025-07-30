@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>working-scripts-chatGpt-LetterFocus</title>
+    <link rel="stylesheet" href="../css/styles-chatLetterFocus.css">
+    <link rel="stylesheet" href="../css/copy-code-chatLetterFocus.css">
+    <link rel="stylesheet" href="../../../css/single-header.css">
+
+    <link rel="stylesheet" href="../../../css/dark-mode.css">
+
+    <script type="module" src="js/letterFocus-chatLetterFoucs.js" defer></script>
+    <script type="module" src="js/copy-code-chatLetterFocus.js" defer></script>
+    <script type="module" src="../../../../js/dark-mode.js" defer></script>
+    <script type="module" src="js/load-textarea-code.js" defer></script>
+
+</head>
+<!-- <body class="dark-mode"> -->
+
+<body class="working">
+    <div class="page-container">
+        <input tabindex="1" id="workingScriptInputNum" type="number" min="0" max="4" step="1" value="0" readonly>
+        <header>
+            <h2 class="bg-version">working scrips</h2>
+            <h3>Chatgpt-letterFocus</h3>
+
+            <article>
+                <p> When done make into extension in </p>
+                <div class="code-container">
+                    <pre tabindex="0" class="">chrome://extensions/</pre>
+                </div>
+            </article>
+        </header>
+        <main class="main-content">
+            <div class="versions-container">
+                <header>
+                    <a tabindex="0"id="backBtn">back</a>
+                    <h2 id="versionTitle">Main Current WOrking Version</h2>
+                    <a tabindex="0" id="nxtBtn">next</a>
+                </header>
+                <div class="version">
+
+                    <div class="code-container">
+                        <textarea  readonly id="mainScript" tabindex="0" class="copy-code">
+                            <!-- <textarea readonly   id="mainScript" tabindex="0" class="copy-code"> -->
+                            No scripts are in this project yet, save them in /versions folder in the directory of this
+                            page
+                        </textarea>
+                    </div>
+                </div>
+                <a tabindex="0" id="backToTopBtn" href="#top">end to Top</a>
+            </div>
+            <!-- ------------------------------------------------------- -->
+        </main>
+        <div class="code-elements-container">
+            <img id="elementImg" src="images/01-chatPrompt.png" alt="">
+            <!-- 1. -->
+            <div class="code-container">
+                <span>question container</span>
+                <p>
+                    quesiton prompt bottom
+                </p>
+                <a class="black-click-img-box"></a>
+                <pre data-img="images/01-chatPrompt.png" tabindex="0" class="copy-code">
+&lt;div contenteditable="true" translate="no" class="ProseMirror" id="prompt-textarea"
+data-virtualkeyboard="true">
+&lt;p>Ask Anything&lt;/p>
+&lt;/div>
+                </pre>
+            </div>
+            <!-- 2. -->
+            <div class="code-container">
+                <span>question </span>
+                <p style="color:red">
+                    quesiton ? in chat, i don'tt have img for this
+                </p>
+                <a class="black-click-img-box"></a>
+                <pre tabindex="0" data-img="images/02.png" class="copy-code">
+&lt;div class="whitespace-pre-wrap" tabindex="-1" style="border: none;">if i open a new chat and try
+to enter number in
+the
+&lt;div contenteditable="true" translate="no" class="ProseMirror"
+data-virtualkeyboard="true"&gt;&lt;p&gt;this script is working really well but anytime
+&lt;/p&gt;&lt;/div&gt;
+&lt;/div>
+                </pre>
+            </div>
+            <!-- <div class="code-container">
+                <span>Inbox Button</span>
+                <p>
+                    aticle question container, where
+                </p>
+                <pre tabindex="0" class="copy-code">
+                    &lt;article class="text-token-text-primary w-full" dir="auto" data-testid="conversation-turn-1"</pre>
+            </div> -->
+            <!-- <div class="code-container">
+                <span>code example in answer</span>
+                <p>
+                </p>
+                <textarea tabindex="0" class="copy-code">
+                    &lt;div class="contain-inline-size rounded-2xl relative bg-token-sidebar-surface-primary">
+                    &lt;div
+                    class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9
+                    bg-token-sidebar-surface-primary select-none rounded-t-2xl">
+                    js&lt;/div>
+                    &lt;div class="sticky top-9">
+                    &lt;div class="absolute end-0 bottom-0 flex h-9 items-center pe-2">
+                    &lt;div
+                    class="bg-token-bg-elevated-secondary text-token-text-secondary flex items-center gap-4 rounded-sm px-2
+                    font-sans text-xs">
+                    &lt;button class="flex gap-1 items-center select-none py-1" aria-label="Copy">Copy&lt;/button>&lt;span class=""
+                    data-state="closed">&lt;button class="flex items-center gap-1 py-1
+                    select-none">Edit&lt;/button>&lt;/span>&lt;/div>
+                    &lt;/div>
+                    &lt;/div>
+                    &lt;div class="overflow-y-auto p-4" dir="ltr">&lt;code class="whitespace-pre!
+                    language-js">&lt;span>&lt;span>&lt;span
+                    class="hljs-keyword">for&lt;/span>&lt;/span>&lt;span> (&lt;/span>&lt;span>&lt;span
+                    class="hljs-keyword">let&lt;/span>&lt;/span>&lt;span> i = &lt;/span>&lt;span>&lt;span
+                    class="hljs-number">0&lt;/span>&lt;/span>&lt;span>; i &lt; &lt;/span>&lt;span>&lt;span
+                    class="hljs-number">3&lt;/span>&lt;/span>&lt;span>; i++) {
+                    &lt;/span>&lt;span>&lt;span class="hljs-variable
+                    language_">console&lt;/span>&lt;/span>&lt;span>.&lt;/span>&lt;span>&lt;span
+                    class="hljs-title function_">log&lt;/span>&lt;/span>&lt;span>(&lt;/span>&lt;span>&lt;span
+                    class="hljs-string">"Looping!"&lt;/span>&lt;/span>&lt;span>);
+                    }
+                    &lt;/span>&lt;/span>&lt;/code>&lt;/div>
+                    &lt;/div></textarea>
+            </div> -->
+            <!-- <div class="code-container">
+                <p>
+                    The <Strong>Whole</Strong> container with questions in artciels
+                    <br>
+                    <code>"data-testid="conversation-turn &lt;odd numbers> </code> are always my questions
+                    <code>&lt;even> numbered ones are the preceding data-testid ... answer to that question</code>
+                </p>
+                <textarea readonly tabindex="0" class="copy-code">
+                    &lt;div class="@thread-xl/thread:pt-header-height flex flex-col text-sm" style="padding-bottom: 81.0938px;">
+                    &lt;article class="text-token-text-primary w-full" dir="auto" data-testid="conversation-turn-1"
+                    data-scroll-anchor="false">
+                    &lt;h5 class="sr-only">You said:&lt;/h5>
+                    &lt;div
+                    class="text-base my-auto mx-auto py-5 [--thread-content-margin:--spacing(4)]
+                    @[37rem]:[--thread-content-margin:--spacing(6)] @[72rem]:[--thread-content-margin:--spacing(16)]
+                    px-(--thread-content-margin)">
+                    &lt;div class="[--thread-content-max-width:32rem] @[34rem]:[--thread-content-max-width:40rem]
+                    @[64rem]:[--thread-content-max-width:48rem] mx-auto flex max-w-(--thread-content-max-width) flex-1 text-base
+                    gap-4
+                    md:gap-5 lg:gap-6 group/turn-messages focus-visible:outline-hidden"
+                    tabindex="-1">
+                    &lt;div class="group/conversation-turn relative flex w-full min-w-0 flex-col">
+                    &lt;div class="relative flex-col gap-1 md:gap-3">
+                    &lt;div class="flex max-w-full flex-col grow">
+                    &lt;div data-message-author-role="user" data-message-id="29a56ee7-6903-4cf5-91f0-b2f27173afe6"
+                    dir="auto"
+                    class="min-h-8 text-message relative flex w-full flex-col items-end gap-2 text-start break-words
+                    whitespace-normal
+                    [.text-message+&amp;]:mt-5">
+                    &lt;div class="flex w-full flex-col gap-1 empty:hidden items-end rtl:items-start">
+                    &lt;div
+                    class="relative max-w-[var(--user-chat-width,70%)] bg-token-message-surface rounded-3xl px-5 py-2.5">
+                    &lt;div class="whitespace-pre-wrap">&lt;/div>
+                    &lt;/div>
+                    &lt;/div>
+                    &lt;/div>
+                    &lt;/div>
+                    &lt;div class="mx-[var(--mini-thread-content-inset)]">
+                    &lt;div class="flex justify-end">
+                    &lt;div class="touch:-me-2 touch:-ms-3.5 -ms-2.5 -me-1 flex flex-wrap items-center gap-y-4 p-1 select-none
+                    focus-within:transition-none hover:transition-none duration-300 group-hover/turn-messages:delay-300
+                    pointer-events-none
+                    opacity-0 motion-safe:transition-opacity group-hover/turn-messages:pointer-events-auto
+                    group-hover/turn-messages:opacity-100 group-focus-within/turn-messages:pointer-events-auto
+                    group-focus-within/turn-messages:opacity-100 has-data-[state=open]:pointer-events-auto
+                    has-data-[state=open]:opacity-100"
+                    style="mask-position: 0% 0%;">&lt;button
+                    class="text-token-text-secondary hover:bg-token-bg-secondary rounded-lg"
+                    aria-label="Copy" aria-selected="false" data-testid="copy-turn-action-button"
+                    data-state="closed">&lt;span
+                    class="touch:w-10 flex h-8 w-8 items-center justify-center">&lt;svg width="20"
+                    height="20" viewBox="0 0 20 20" fill="currentColor"
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="icon">&lt;/svg>&lt;/span>&lt;/button>&lt;button
+                    class="text-token-text-secondary hover:bg-token-bg-secondary rounded-lg"
+                    aria-label="Edit message" aria-selected="false" data-state="closed">&lt;span
+                    class="touch:w-10 flex h-8 w-8 items-center justify-center">&lt;svg width="20"
+                    height="20" viewBox="0 0 20 20" fill="currentColor"
+                    xmlns="http://www.w3.org/2000/svg" class="icon">&lt;/svg>&lt;/span>&lt;/button>
+                    &lt;/div>
+                    &lt;/div>
+                    &lt;/div>
+                    &lt;/div>
+                    &lt;/div>
+                    &lt;/div>
+                    &lt;/div>
+                    &lt;/article>
+                    &lt;article class="text-token-text-primary w-full" dir="auto" data-testid="conversation-turn-2"
+                    data-scroll-anchor="false">
+                    &lt;h6 class="sr-only">ChatGPT said:&lt;/h6>
+                    &lt;div
+                    class="text-base my-auto mx-auto py-5 [--thread-content-margin:--spacing(4)]
+                    @[37rem]:[--thread-content-margin:--spacing(6)] @[72rem]:[--thread-content-margin:--spacing(16)]
+                    px-(--thread-content-margin)">
+                    &lt;div class="[--thread-content-max-width:32rem] @[34rem]:[--thread-content-max-width:40rem]
+                    @[64rem]:[--thread-content-max-width:48rem] mx-auto flex max-w-(--thread-content-max-width) flex-1 text-base
+                    gap-4
+                    md:gap-5 lg:gap-6 group/turn-messages focus-visible:outline-hidden"
+                    tabindex="-1">
+                    &lt;div class="group/conversation-turn relative flex w-full min-w-0 flex-col agent-turn">
+                    &lt;div class="relative flex-col gap-1 md:gap-3">
+                    &lt;div class="flex max-w-full flex-col grow">
+                    &lt;div data-message-author-role="assistant"
+                    data-message-id="4b513ef1-bc15-42e8-8a01-efd6c4f6e59e" dir="auto"
+                    class="min-h-8 text-message relative flex w-full flex-col items-end gap-2 text-start break-words
+                    whitespace-normal
+                    [.text-message+&amp;]:mt-5"
+                    data-message-model-slug="gpt-4o">
+                    &lt;div class="flex w-full flex-col gap-1 empty:hidden first:pt-[3px]">
+                    &lt;div class="markdown prose dark:prose-invert w-full break-words dark">
+                    &lt;p data-start="0" data-end="128">Absolutely! Here's a 5-part numbered to-do list
+                    example using the same structured breakdown style I typically use for
+                    questions:&lt;/p>
+                    &lt;hr data-start="130" data-end="133">
+                    &lt;p data-start="135" data-end="162">&lt;strong data-start="135" data-end="162">📝
+                    To-Do List (Example)&lt;/strong>&lt;/p>
+                    &lt;ol data-start="164" data-end="887">
+                    &lt;li data-start="164" data-end="297">
+                    &lt;p data-start="167" data-end="191">&lt;strong data-start="167"
+                    data-end="189">Organize workspace&lt;/strong>&lt;/p>
+                    &lt;ul data-start="195" data-end="297">
+                    &lt;li data-start="195" data-end="226">
+                    &lt;p data-start="197" data-end="226">Clear off unnecessary items
+                    &lt;/p>
+                    &lt;/li>
+                    &lt;li data-start="230" data-end="252">
+                    &lt;p data-start="232" data-end="252">Wipe down surfaces&lt;/p>
+                    &lt;/li>
+                    &lt;li data-start="256" data-end="297">
+                    &lt;p data-start="258" data-end="297">Reposition tools or devices
+                    for comfort&lt;/p>
+                    &lt;/li>
+                    &lt;/ul>
+                    &lt;/li>
+                    &lt;li data-start="299" data-end="446">
+                    &lt;p data-start="302" data-end="333">&lt;strong data-start="302"
+                    data-end="331">Plan the day's main focus&lt;/strong>&lt;/p>
+                    &lt;ul data-start="337" data-end="446">
+                    &lt;li data-start="337" data-end="372">
+                    &lt;p data-start="339" data-end="372">Choose &lt;em data-start="346"
+                    data-end="351">one&lt;/em> high-priority task&lt;/p>
+                    &lt;/li>
+                    &lt;li data-start="376" data-end="409">
+                    &lt;p data-start="378" data-end="409">Break it into 2–3 clear steps
+                    &lt;/p>
+                    &lt;/li>
+                    &lt;li data-start="413" data-end="446">
+                    &lt;p data-start="415" data-end="446">Estimate time required for
+                    each&lt;/p>
+                    &lt;/li>
+                    &lt;/ul>
+                    &lt;/li>
+                    &lt;li data-start="448" data-end="584">
+                    &lt;p data-start="451" data-end="477">&lt;strong data-start="451"
+                    data-end="475">Handle communication&lt;/strong>&lt;/p>
+                    &lt;ul data-start="481" data-end="584">
+                    &lt;li data-start="481" data-end="505">
+                    &lt;p data-start="483" data-end="505">Check email/messages&lt;/p>
+                    &lt;/li>
+                    &lt;li data-start="509" data-end="553">
+                    &lt;p data-start="511" data-end="553">Respond to urgent or
+                    important ones only&lt;/p>
+                    &lt;/li>
+                    &lt;li data-start="557" data-end="584">
+                    &lt;p data-start="559" data-end="584">Flag follow-ups for later&lt;/p>
+                    &lt;/li>
+                    &lt;/ul>
+                    &lt;/li>
+                    &lt;li data-start="586" data-end="755">
+                    &lt;p data-start="589" data-end="624">&lt;strong data-start="589"
+                    data-end="622">Take a focused learning block&lt;/strong>&lt;/p>
+                    &lt;ul data-start="628" data-end="755">
+                    &lt;li data-start="628" data-end="683">
+                    &lt;p data-start="630" data-end="683">Choose one topic (e.g.,
+                    JavaScript, language, etc.)&lt;/p>
+                    &lt;/li>
+                    &lt;li data-start="687" data-end="718">
+                    &lt;p data-start="689" data-end="718">Set timer for 25–30 minutes
+                    &lt;/p>
+                    &lt;/li>
+                    &lt;li data-start="722" data-end="755">
+                    &lt;p data-start="724" data-end="755">No multitasking or
+                    distractions&lt;/p>
+                    &lt;/li>
+                    &lt;/ul>
+                    &lt;/li>
+                    &lt;li data-start="757" data-end="887">
+                    &lt;p data-start="760" data-end="790">&lt;strong data-start="760"
+                    data-end="788">Reflect and log progress&lt;/strong>&lt;/p>
+                    &lt;ul data-start="794" data-end="887">
+                    &lt;li data-start="794" data-end="819">
+                    &lt;p data-start="796" data-end="819">What went well today?&lt;/p>
+                    &lt;/li>
+                    &lt;li data-start="823" data-end="850">
+                    &lt;p data-start="825" data-end="850">What could be improved?&lt;/p>
+                    &lt;/li>
+                    &lt;li data-start="854" data-end="887">
+                    &lt;p data-start="856" data-end="887">Add notes or tasks for
+                    tomorrow&lt;/p>
+                    &lt;/li>
+                    &lt;/ul>
+                    &lt;/li>
+                    &lt;/ol>
+                    &lt;hr data-start="889" data-end="892">
+                    &lt;p data-start="894" data-end="959" data-is-last-node="" data-is-only-node="">Let
+                    me know if you want one tailored for your actual goals today.&lt;/p>
+                    &lt;/div>
+                    &lt;/div>
+                    &lt;/div>
+                    &lt;/div>
+                    &lt;div class="mx-[var(--mini-thread-content-inset)]">
+                    &lt;div class="flex min-h-[46px] justify-start">
+                    &lt;div class="touch:-me-2 touch:-ms-3.5 -ms-2.5 -me-1 flex flex-wrap items-center gap-y-4 p-1 select-none
+                    touch:w-[calc(100%+--spacing(3.5))] -mt-1 w-[calc(100%+--spacing(2.5))] duration-[1.5s]
+                    focus-within:transition-none
+                    hover:transition-none pointer-events-none [mask-image:linear-gradient(to_right,black_33%,transparent_66%)]
+                    [mask-size:300%_100%] [mask-position:100%_0%] motion-safe:transition-[mask-position]
+                    group-hover/turn-messages:pointer-events-auto group-hover/turn-messages:[mask-position:0_0]
+                    group-focus-within/turn-messages:pointer-events-auto group-focus-within/turn-messages:[mask-position:0_0]
+                    has-data-[state=open]:pointer-events-auto has-data-[state=open]:[mask-position:0_0]"
+                    style="mask-position: 0% 0%;">&lt;button
+                    class="text-token-text-secondary hover:bg-token-bg-secondary rounded-lg"
+                    aria-label="Copy" aria-selected="false" data-testid="copy-turn-action-button"
+                    data-state="closed">&lt;span
+                    class="touch:w-10 flex h-8 w-8 items-center justify-center">&lt;svg width="20"
+                    height="20" viewBox="0 0 20 20" fill="currentColor"
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="icon">&lt;/svg>&lt;/span>&lt;/button>&lt;button
+                    class="text-token-text-secondary hover:bg-token-bg-secondary rounded-lg"
+                    aria-label="Good response" aria-selected="false"
+                    data-testid="good-response-turn-action-button" data-state="closed">&lt;span
+                    class="touch:w-10 flex h-8 w-8 items-center justify-center">&lt;svg width="20"
+                    height="20" viewBox="0 0 20 20" fill="currentColor"
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="icon">&lt;/svg>&lt;/span>&lt;/button>&lt;button
+                    class="text-token-text-secondary hover:bg-token-bg-secondary rounded-lg"
+                    aria-label="Bad response" aria-selected="false"
+                    data-testid="bad-response-turn-action-button" data-state="closed">&lt;span
+                    class="touch:w-10 flex h-8 w-8 items-center justify-center">&lt;svg width="20"
+                    height="20" viewBox="0 0 20 20" fill="currentColor"
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="icon">&lt;/svg>&lt;/span>&lt;/button>&lt;button
+                    class="text-token-text-secondary hover:bg-token-bg-secondary rounded-lg"
+                    aria-label="Read aloud" aria-selected="false"
+                    data-testid="voice-play-turn-action-button" data-state="closed">&lt;span
+                    class="touch:w-10 flex h-8 w-8 items-center justify-center">&lt;svg width="20"
+                    height="20" viewBox="0 0 20 20" fill="currentColor"
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="icon">&lt;/svg>&lt;/span>&lt;/button>&lt;button
+                    class="text-token-text-secondary hover:bg-token-bg-secondary rounded-lg"
+                    aria-label="Edit in canvas" aria-selected="false" data-state="closed">&lt;span
+                    class="touch:w-10 flex h-8 w-8 items-center justify-center">&lt;svg width="20"
+                    height="20" viewBox="0 0 20 20" fill="currentColor"
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="icon">&lt;/svg>&lt;/span>&lt;/button>&lt;button
+                    class="text-token-text-secondary hover:bg-token-bg-secondary rounded-lg"
+                    aria-label="Share" aria-selected="false" data-state="closed">&lt;span
+                    class="touch:w-10 flex h-8 w-8 items-center justify-center">&lt;svg width="20"
+                    height="20" viewBox="0 0 20 20" fill="currentColor"
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="icon">&lt;/svg>&lt;/span>&lt;/button>&lt;span class=""
+                    data-state="closed">&lt;button
+                    class="cursor-pointer text-token-text-secondary hover:bg-token-bg-secondary touch:px-2.5 h-[30px] rounded-md
+                    px-1.5"
+                    aria-label="Switch model" type="button" id="radix-«rtj»"
+                    aria-haspopup="menu" aria-expanded="false" data-state="closed">
+                    &lt;div class="flex items-center">&lt;svg width="20" height="20"
+                    viewBox="0 0 20 20" fill="currentColor"
+                    xmlns="http://www.w3.org/2000/svg" class="icon">&lt;/svg>&lt;svg
+                    width="16" height="16" viewBox="0 0 16 16" fill="currentColor"
+                    xmlns="http://www.w3.org/2000/svg" class="icon-sm">&lt;/svg>&lt;/div>
+                    &lt;/button>&lt;/span>&lt;/div>
+                    &lt;/div>
+                    &lt;/div>
+                    &lt;/div>
+                    &lt;/div>
+                    &lt;/div>
+                    &lt;/div>
+                    &lt;/article>
+            
+                    &lt;div aria-hidden="true" data-edge="true" class="pointer-events-none h-px w-px">&lt;/div>
+                    &lt;div>&lt;/div>
+                    &lt;div style="opacity: 1;">&lt;button
+                    class="cursor-pointer absolute z-10 rounded-full bg-clip-padding border text-token-text-secondary
+                    border-token-border-default end-1/2 translate-x-1/2 bg-token-main-surface-primary w-8 h-8 flex items-center
+                    justify-center bottom-[calc(var(--composer-overlap-px)+--spacing(6))]">&lt;svg
+                    width="20" height="20" viewBox="0 0 20 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg"
+                    class="icon text-token-text-primary">&lt;/svg>&lt;/button>&lt;/div>
+                    &lt;/div>
+                </textarea>
+            </div> -->
+            <!-- 3. -->
+            <div class="code-container">
+                <p>
+                    Initial Wave file logo icon btn
+                </p>
+                <a class="black-click-img-box"></a>
+                <textarea readonly data-img="images/04.png" tabindex="0" class="copy-code">
+&lt;div class="min-w-9" data-testid="composer-speech-button-container">&lt;span class=""
+data-state="closed">&lt;button
+data-testid="composer-speech-button" aria-label="Start voice mode" class="relative flex h-9
+items-center justify-center
+rounded-full transition-colors disabled:text-gray-50 disabled:opacity-30 w-9 bg-[#00000014]
+dark:bg-[#FFFFFF29]
+text-token-text-primary hover:bg-[#0000001F] hover:dark:bg-[#FFFFFF3D]"
+style="view-transition-name:var(--vt-composer-speech-button)">&lt;div class="flex items-center
+justify-center">&lt;svg
+width="20" height="20" viewBox="0 0 20 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg"
+class="icon">&lt;path>&lt;/path>&lt;/svg>&lt;/div>&lt;/button>&lt;/span>&lt;/div>
+                </textarea>
+            </div>
+            <div class="code-container">
+                <p>
+                    Up arrow Start asking button
+                </p>
+                <a class="black-click-img-box"></a>
+                <textarea readonly data-img="images/05.png" tabindex="0" class="copy-code">
+&lt;button id="composer-submit-button" aria-label="Send prompt" data-testid="send-button"
+class="dark:disabled:bg-token-text-quaternary dark:disabled:text-token-main-surface-secondary flex
+items-center
+justify-center rounded-full transition-colors hover:opacity-70 disabled:text-[#f4f4f4]
+disabled:hover:opacity-100
+dark:focus-visible:outline-white bg-black text-white disabled:bg-[#D7D7D7] dark:bg-white
+dark:text-black h-9
+w-9">&lt;svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor"
+xmlns="http://www.w3.org/2000/svg"
+class="icon">&lt;path d="">&lt;/path>&lt;/svg>&lt;/button>
+                </textarea>
+            </div>
+            <div class="code-container">
+                <p>
+                    Square stop asking button
+                </p>
+            <a class="black-click-img-box"></a>
+                <textarea readonly data-img="images/06.png" tabindex="0" class="copy-code">
+&lt;button id="composer-submit-button" aria-label="Stop streaming" data-testid="stop-button"
+class="dark:disabled:bg-token-text-quaternary dark:disabled:text-token-main-surface-secondary flex
+items-center
+justify-center rounded-full transition-colors hover:opacity-70 disabled:text-[#f4f4f4]
+disabled:hover:opacity-100
+dark:focus-visible:outline-white bg-black text-white disabled:bg-[#D7D7D7] dark:bg-white
+dark:text-black h-9
+w-9">&lt;svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor"
+xmlns="http://www.w3.org/2000/svg"
+class="icon-lg">&lt;path d="">&lt;/path>&lt;/svg>&lt;/button>
+                </textarea>
+            </div>
+        </div>
+    </div>
+    <header>
+        <a tabindex="0" id="homelink" href="../chatGpt-letterFocus.html">home</a>
+        <h1>Chat Gpt - Letter Focus</h1>
+        <!-- I like next here when small on mobile -->
+        <!-- <a tabindex="0" id="nxtBtn">next</a> -->
+    </header>
+
+</body>
+
+</html>

@@ -1,0 +1,28 @@
+Question 2
+You said:
+do i put all of the above scripts into a directory
+ChatGPT said:
+ChatGPT
+Yes! You'll need to organize the files into a directory to properly structure your Chrome extension. Here’s how your directory should look:
+
+arduino
+Copy
+Edit
+google-letter-focus-extension/
+│── manifest.json
+│── content.js
+│── background.js
+│── popup.html  (optional)
+Steps to Set Up:
+Create a new folder on your computer, e.g., google-letter-focus-extension.
+Inside the folder, create the following files and copy the respective script content:
+manifest.json
+content.js
+background.js
+popup.html (optional, only needed if you want a UI popup)
+Load it into Chrome:
+Open Chrome and go to chrome://extensions/
+Enable Developer mode (toggle in the top-right corner).
+Click "Load unpacked" and select the google-letter-focus-extension directory.
+The extension should now be active!
+Let me know if you need further guidance! 🚀

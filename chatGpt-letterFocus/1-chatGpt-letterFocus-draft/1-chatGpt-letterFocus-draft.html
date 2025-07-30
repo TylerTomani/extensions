@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1-chatGpt-letterFocus-draft</title>
+    <link rel="stylesheet" href="../css/styles-chatGptLetterFocus.css">
+    <link rel="stylesheet" href="../css/copy-code-chatGptLetterFocus.css">
+    <link rel="stylesheet" href="../../../css/single-header.css">
+    
+    <link rel="stylesheet" href="../../../css/dark-mode.css">
+    
+    <script type="module" src="../js/letterFocus-chatGptLetterFocus.js" defer></script>
+    <script type="module" src="../js/copy-code-chatGptLetterFocus.js" defer></script>
+    <script type="module" src="../../../../js/dark-mode.js" defer></script>
+    <script type="module" src="../js/load-textarea-code-draft.js" defer></script>
+
+</head>
+<!-- <body class="dark-mode"> -->
+
+<body class="draft">
+    <div class="page-container">
+        
+        <header>
+            <h2 class="bg-version">1-chatGpt-letterFocus-draft</h2>
+            <article>
+                <p> When done make into extension in </p>
+                <div class="code-container">
+                    <pre tabindex="0" class="">chrome://extensions/</pre>
+                </div>
+            </article>
+        </header>
+        <main class="main-content">
+            <div class="versions-container">
+                <header>
+                    <a tabindex="0" id="backBtn">back</a>
+                    <h2 id="versionTitle">TBD</h2>
+                    <a tabindex="0" id="nxtBtn">next</a>
+                </header>
+                <div class="version">
+
+                    <div class="code-container">
+                        <textarea autofocus readonly id="mainScript" tabindex="0" class="copy-code">
+                            <!-- <textarea readonly   id="mainScript" tabindex="0" class="copy-code"> -->
+                            No scripts are in this project yet, save them in /versions folder in the directory of this
+                            page
+                        </textarea>
+                    </div>
+                </div>
+                <a tabindex="0" id="backToTopBtn" href="#top">end to Top</a>
+            </div>
+            <!-- ------------------------------------------------------- -->
+        </main>
+        <div class="code-elements-container">
+            <a id="xBtnPopup" href="#">X</a>
+            <img id="elementImg" src="images/01-chatPrompt.png" alt="">
+            <!-- 1. -->
+            <div class="code-container">
+                <span>question container</span>
+                <p>
+                    quesiton prompt bottom
+                </p>
+                <a class="black-click-img-box"></a>
+                <pre data-img="images/01-chatPrompt.png" tabindex="0" class="copy-code">
+&lt;div contenteditable="true" translate="no" class="ProseMirror" id="prompt-textarea"
+data-virtualkeyboard="true">
+&lt;p>Ask Anything&lt;/p>
+&lt;/div>
+                </pre>
+            </div>
+            <!-- 2. -->
+            <div class="code-container">
+                <span>question </span>
+                <p style="color:red">
+                    quesiton ? in chat, i don'tt have img for this
+                </p>
+                <a class="black-click-img-box"></a>
+                <pre tabindex="0" data-img="images/02.png" class="copy-code">
+&lt;div class="whitespace-pre-wrap" tabindex="-1" style="border: none;">if i open a new chat and try
+to enter number in
+the
+&lt;div contenteditable="true" translate="no" class="ProseMirror"
+data-virtualkeyboard="true"&gt;&lt;p&gt;this script is working really well but anytime
+&lt;/p&gt;&lt;/div&gt;
+&lt;/div>
+                </pre>
+            </div>
+            <!-- 3. -->
+            <div class="code-container">
+                <p>
+                    Initial Wave file logo icon btn
+                </p>
+                <a class="black-click-img-box"></a>
+                <textarea readonly data-img="images/04.png" tabindex="0" class="copy-code">
+&lt;div class="min-w-9" data-testid="composer-speech-button-container">&lt;span class=""
+data-state="closed">&lt;button
+data-testid="composer-speech-button" aria-label="Start voice mode" class="relative flex h-9
+items-center justify-center
+rounded-full transition-colors disabled:text-gray-50 disabled:opacity-30 w-9 bg-[#00000014]
+dark:bg-[#FFFFFF29]
+text-token-text-primary hover:bg-[#0000001F] hover:dark:bg-[#FFFFFF3D]"
+style="view-transition-name:var(--vt-composer-speech-button)">&lt;div class="flex items-center
+justify-center">&lt;svg
+width="20" height="20" viewBox="0 0 20 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg"
+class="icon">&lt;path>&lt;/path>&lt;/svg>&lt;/div>&lt;/button>&lt;/span>&lt;/div>
+                </textarea>
+            </div>
+            <div class="code-container">
+                <p>
+                    Up arrow Start asking button
+                </p>
+                <a class="black-click-img-box"></a>
+                <textarea readonly data-img="images/05.png" tabindex="0" class="copy-code">
+&lt;button id="composer-submit-button" aria-label="Send prompt" data-testid="send-button"
+class="dark:disabled:bg-token-text-quaternary dark:disabled:text-token-main-surface-secondary flex
+items-center
+justify-center rounded-full transition-colors hover:opacity-70 disabled:text-[#f4f4f4]
+disabled:hover:opacity-100
+dark:focus-visible:outline-white bg-black text-white disabled:bg-[#D7D7D7] dark:bg-white
+dark:text-black h-9
+w-9">&lt;svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor"
+xmlns="http://www.w3.org/2000/svg"
+class="icon">&lt;path d="">&lt;/path>&lt;/svg>&lt;/button>
+                </textarea>
+            </div>
+            <div class="code-container">
+                <p>
+                    Square stop asking button
+                </p>
+                <a class="black-click-img-box"></a>
+                <textarea readonly data-img="images/06.png" tabindex="0" class="copy-code">
+&lt;button id="composer-submit-button" aria-label="Stop streaming" data-testid="stop-button"
+class="dark:disabled:bg-token-text-quaternary dark:disabled:text-token-main-surface-secondary flex
+items-center
+justify-center rounded-full transition-colors hover:opacity-70 disabled:text-[#f4f4f4]
+disabled:hover:opacity-100
+dark:focus-visible:outline-white bg-black text-white disabled:bg-[#D7D7D7] dark:bg-white
+dark:text-black h-9
+w-9">&lt;svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor"
+xmlns="http://www.w3.org/2000/svg"
+class="icon-lg">&lt;path d="">&lt;/path>&lt;/svg>&lt;/button>
+                </textarea>
+            </div>
+        </div>
+    </div>
+    <header>
+        <a tabindex="0" id="homelink" href="../chatGpt-letterFocus.html">home</a>
+        <h1>Chat Gpt - Letter Focus</h1>
+        <!-- I like next here when small on mobile -->
+        <!-- <a tabindex="0" id="nxtBtn">next</a> -->
+    </header>
+
+</body>
+
+</html>

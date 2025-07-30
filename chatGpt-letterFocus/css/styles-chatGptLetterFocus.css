@@ -1,0 +1,216 @@
+.working {
+    background-color: rgb(3, 100, 22, .45);
+}
+
+.draft {
+    background-color: rgba(57, 46, 46, 0.5);
+}
+
+.page-container {
+    position: relative;
+}
+
+#workingScriptInputNum,
+#defaultScriptInputBox {
+    position: absolute;
+    top: 10px;
+    width: 50px;
+    right: 20%;
+    padding-left: 2%;
+    color: black;
+    height: 50px;
+    right: 0%;
+    border: 2px solid red;
+    z-index: 1000;
+}
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.versions-container>header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.versions-container>header button#nxtBtn {}
+
+.version {
+    border: 2px solid blue;
+    margin: 0 2.5%;
+    /* display: flex; */
+    /* flex-direction: column; */
+    height: 75vh;
+    margin-bottom: 10%;
+}
+
+.code-elements-container {
+    /* position: relative; */
+    border: 1px dashed black;
+    margin: 0 5%;
+}
+
+.code-container {
+    height: 100%;
+}
+
+.code-elements-container .code-container .copy-code {
+    min-height: 120px;
+    z-index: 0;
+    min-width: 30vw;
+
+}
+
+.copy-code {
+    width: 100%;
+    /* height: auto; */
+    font-family: monospace;
+    white-space: pre;
+    overflow-x: auto;
+    border: 1px solid #ccc;
+    background: #f5f5f5;
+    padding: .5em;
+    /* resize: vertical; */
+    height: 100%;
+    display: block;
+    color: black;
+    font-weight: 999;
+}
+
+.dark-mode textarea {
+    background: rgb(40, 38, 46, .05);
+}
+
+#mainScript {
+    /* background-color: blue; */
+}
+
+#draftScript {
+    background-color: red !important;
+}
+
+#wokingBackupScript {
+    background-color: red !important;
+}
+
+#elementImg {
+    z-index: 0;
+    right: 0;
+    width: 50%;
+    display: none;
+}
+
+.enlarge {
+    display: block !important;
+    z-index: 9999 !important;
+    position: fixed;
+    top: 50%;
+    /* left: 50%; */
+    max-width: 90vw;
+    max-height: 60vh;
+    transition: transform 0.2s ease;
+    /* You can't click when this is on  */
+    /* pointer-events: none; */
+    transform: translate(-50%, -50%) scale(1.5);
+    /* optional: prevents interaction while enlarged */
+}
+
+.popup {
+    position: absolute !important;
+    top: 0;
+    right: 0;
+}
+
+.code-elements-container .code-container {
+    position: relative;
+
+}
+
+.black-click-img-box {
+    display: block;
+    position: absolute;
+    right: 0;
+    background-color: black;
+    height: 25px;
+    width: 35px;
+    padding: 1%;
+}
+
+
+@media screen and (max-width: 801px) {
+    .code-elements-container .code-container {
+        position: relative;
+    }
+
+    .code-container {}
+
+    .dark-mode .code-elements-container .code-container .copy-code {
+        /* color: black; */
+    }
+
+    .code-elements-container .code-container .copy-code {
+        border: 1px solid black;
+
+    }
+
+    .code-elements-container {
+        margin: 0 0;
+    }
+
+    .popup {
+        left: 5%;
+    }
+
+    .versions-container {
+        margin: 0 5%;
+
+    }
+
+    .version {
+        margin: 0;
+    }
+
+    textarea {
+        font-size: 90%;
+    }
+
+    .enlarge {
+        transform: translate(-50%, -50%) scale(2);
+    }
+
+    .black-click-img-box {
+        height: 25px;
+        width: 35px;
+        padding: 1%;
+        right: 1%;
+        top: 12%;
+    }
+}
+
+@media screen and (max-width: 420px) {
+    .black-click-img-box {
+        height: 40px;
+        width: 40px;
+    }
+}
+
+
+.copy-code:active,
+.copy-code:focus {
+    box-shadow: 0 0 3px 3px blue;
+}
+
+.hide {
+    display: none !important;
+}
+
+#xBtnPopup {
+    border: 2px solid black;
+    padding: 2%;
+    background-color: white;
+    position: sticky;
+    background-color: whitesmoke;
+    display: block;
+    right: 0;
+}

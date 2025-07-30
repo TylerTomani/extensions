@@ -1,0 +1,36 @@
+:root {
+    --bg-primary: #201d1d;
+    --font-primary: whitesmoke;
+}
+
+.darkMode {
+    background-color: var(--bg-primary);
+    color: var(--font-primary)
+}
+
+.darkMode h3,.darkMode #due_date_label{
+    color: var(--font-primary) !important;
+
+}
+.darkMode nav#nav-section-lesson-titles {
+    background-color: var(--bg-primary)
+}
+
+.darkMode a {
+    color: white;
+}
+
+.darkMode,
+h4 .darkMode p {
+    color: whitesmoke;
+}
+
+.darkMode #nav-section-lesson-titles {
+    border-top: 1px solid whitesmoke;
+    border-bottom: 1px solid whitesmoke;
+
+}
+
+.darkMode main>aside {
+    border-right: 1px solid whitesmoke;
+}

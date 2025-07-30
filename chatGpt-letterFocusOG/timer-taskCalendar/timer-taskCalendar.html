@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>iPhone Style Calendar</title>
+    <link rel="stylesheet" href="css/day-time-blocks.css">
+    <link rel="stylesheet" href="../../../css/footer-double-link-header.css">
+    <script src="js/day-time-blocks.js" defer></script>
+    <script src="../../../js//letter-focus-templates/letter-focus-ids.js" defer></script>
+</head>
+
+<body>
+
+    <div class="page-wrapper">
+        <header class="page-header">
+            <div class="page-title">
+                <h1>Task Calander Version 1</h1>
+                
+            </div>
+        </header>
+        <main  id="mainContainer">
+            <div tabindex="0" class="project">
+                <div tabindex="0" id="taskTimerDisplay"
+                    style="display:none; padding: 10px; font-size: 18px; font-weight: bold; background: #007aff; color: white; text-align: center;">
+                    Task Timer: 00:00
+                </div>
+                
+                <div tabindex="0"  class="day-time-blocks">
+                    <div class="header">
+                        <div class="top-buttons" >
+                            <button tabindex="0" id="toggleFormatBtn">12-hour</button>
+                        </div>
+                        <button tabindex="0" class="plus-btn" id="plusBtnFloating">+</button>
+                        <div class="options" id="optionsMenu">
+                            <button tabindex="0" id="startTask" onclick="startTask()">Start Task</button>
+                            <button tabindex="0" id="addTask" onclick="alert('Add Task coming soon!')">Add Task</button>
+                        </div>
+                    </div>
+                
+                    <div class="calendar" id="calendar">
+                        <!-- Hour blocks -->
+                    </div>
+                </div>
+            </div>        
+    
+        </main>
+        <footer class="footer-header">
+            <div class="main-links">
+                <a tabindex="0" id="homelink" href="../../../index.html">Home (main)</a>
+                <a tabindex="0" id="backlink" href="../taskCalendar.html">back task calendar</a>
+                
+            </div>
+            <div class="main-links">
+                <a tabindex="0" id="codeComandShortcuts" target="_blank" href="../codeComShortcuts/codeComShortcuts.html"><sub>code comand shortcuts</sub></a>
+                <a tabindex="0" id="chatGpt" target="_blank" href="../chatGpt-questions/index.html
+                                                            ">chatGpt
+                    Questions</a>
+            </div>
+    
+            <div class="page-logo">
+                <img
+                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/1200px-Unofficial_JavaScript_logo_2.svg.png">
+            </div>
+        </footer>
+    </div>
+    
+
+    <!-- Floating + button and dropdown should be outside so they can float over everything -->
+    
+
+    
+
+</body>
+
+</html>

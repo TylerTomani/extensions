@@ -1,0 +1,37 @@
+#mainContainer{
+    /* border: 1px solid black; */
+}
+.versions-container {
+    border-top: 1px solid black;    
+    display: flex;
+    align-items: center;
+    padding-left: 5%;
+    height: 100%;
+    gap: 5%;
+}
+.versions-container > .version{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    display: inline-flex;
+    flex-direction: column;
+    text-decoration: none;
+    color: black;
+    border: 2px solid black;
+    min-height: 125px;
+    flex-basis: 25%;
+    padding: 0 2%;
+    padding-top: 2%;
+}
+.version strong{
+    display: inline-block;
+    font-family: monospace;
+    margin-bottom: 5%;
+}
+.version:focus,.version:active{
+    box-shadow: 2px 2px 2px 2px lightseagreen;
+}
+@media screen and (max-width: 700px) {
+    .versions-container {    
+        align-items: flex-end;
+        padding-bottom: 5%;
+    }
+}

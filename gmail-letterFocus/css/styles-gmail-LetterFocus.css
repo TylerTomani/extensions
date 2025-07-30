@@ -1,0 +1,45 @@
+.page-container {
+    margin: 0 2.5%;
+}
+.main-content{
+    /* border: 2px solid black; */
+    display: flex;
+    flex-direction: column;
+}
+.versions-container > header {
+    display: flex;
+    justify-content: space-between;
+}
+.versions-container > header button#nxtBtn{
+
+}
+.version{
+    border: 2px solid blue;
+    margin: 0 5%;
+    /* display: flex; */
+    /* flex-direction: column; */
+    height: 75vh;
+    margin-bottom: 10%;
+}
+.code-container {
+    height: 100%;
+}
+.copy-code {
+    width: 100%;
+    /* height: auto; */
+    font-family: monospace;
+    white-space: pre;
+    overflow-x: auto;
+    border: 1px solid #ccc;
+    background: #f5f5f5;
+    padding: 1em;
+    /* resize: vertical; */
+    height: 100%;
+    display: block;
+}
+
+
+
+.code-elements-container textarea{
+    height: 50vh;
+}

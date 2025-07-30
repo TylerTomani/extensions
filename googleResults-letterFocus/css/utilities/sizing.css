@@ -1,0 +1,13 @@
+.version{   
+    height: 75vh;
+}
+.code-container {
+    height: 100%;
+}
+
+.code-elements-container .code-container .copy-code {
+    /* min-height: 120px; */
+}
+.copy-code {
+    width: 100%;
+}
