@@ -52,12 +52,13 @@
     const matchingLinks = allLinks.filter(({ span }) =>
       span.innerText.trim().toLowerCase().startsWith(key)
     );
-    if (matchingLinks.length === 0) return;
-
-    if (lastFocusedElement) {
+    console.log('tab')
+    if (lastFocusedElement || key === 'tab') {
       lastFocusedElement.classList.remove('focused');
       lastFocusedElement = null;
     }
+    if (matchingLinks.length === 0) return;
+
 
     const activeIndexMatch = matchingLinks.findIndex(obj => obj.link === currentFocusedLink);
 
