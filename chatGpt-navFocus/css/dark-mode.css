@@ -34,7 +34,4 @@ h4 .dark-mode p {
 .dark-mode main>aside {
     border-right: 1px solid whitesmoke;
 }
-.dark-mode .sub-resources-container .resource{
-    border: whitesmoke;
-    color: white;
-}
+

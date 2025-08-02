@@ -1,1 +1,7 @@
-@import url('utilites/sizing.css')
+@import url('utilites/sizing.css');
+@import url('utilites/colors.css');
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
