@@ -52,7 +52,7 @@
     const matchingLinks = allLinks.filter(({ span }) =>
       span.innerText.trim().toLowerCase().startsWith(key)
     );
-    console.log('tab')
+    console.log(key)
     if (lastFocusedElement || key === 'tab') {
       lastFocusedElement.classList.remove('focused');
       lastFocusedElement = null;
