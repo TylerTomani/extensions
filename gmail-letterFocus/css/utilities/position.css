@@ -1,0 +1,9 @@
+.page-container {
+    position: relative;
+}
+.code-elements-container .code-container {
+    position: relative;
+}
+.copy-code {
+    height: 100%;
+}

@@ -1,148 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>gmail-letterFocus</title>
-    <link rel="stylesheet" href="css/styles-gmail-LetterFocus.css">    
-    <link rel="stylesheet" href="css/copy-code-gmail-LetterFocus.css">
-    <link rel="stylesheet" href="../../css/single-header.css">
-    <link rel="stylesheet" href="../../css/dark-mode.css">
+    <link rel="stylesheet" href="css/main.css">
+    <!-- <link rel="stylesheet" href="../../css/dark-mode.css"> -->
 
-    <script type="module" src="js/letterFocus-gmail-letterFocus.js" defer></script>
-    <script type="module" src="js/copy-code-gmail-LetterFocus.js" defer></script>
-    <script type="module" src="../../js/dark-mode.js" defer></script>
-    <script type="module" src="js/load-textarea-code.js" defer></script>
+    <script type="module" src="js/letterFocus-googleResults.js" defer></script>
+    <script type="module" src="js/copy-code-googleResults.js" defer></script>
+    <!-- <script type="module" src="../../../js/dark-mode.js" defer></script> -->
+    <script type="module" src="js/load-textarea-code-draft.js" defer></script>
 
 </head>
 <!-- <body class="dark-mode"> -->
-<body class="">
-    <h2>gmail - Letter Focus</h2>
+
+<body class="draft">
     <div class="page-container">
-        <header >
-            <h4>Notes</h4>
-            <article>
-                <p> When done make into extension in </p>
-                <div class="code-container">
-                    <pre tabindex="0" class="">chrome://extensions/</pre>
-                </div>
-            </article>
+        <header>
+            <h1 class="bg-version">gmail-letterFocus</h2>
         </header>
         <main class="main-content">
             <div class="versions-container">
                 <header>
+                    <a tabindex="0" id="backBtn">back</a>
                     <h2 id="versionTitle">Main Current WOrking Version</h2>
+                    <a tabindex="0" id="nxtBtn">next</a>
                 </header>
-                <div class="version">
-                    
+                <div class="version"> 
+
                     <div class="code-container">
-                        <textarea  readonly   id="mainScript" tabindex="0" class="copy-code">
-        Not working go to main-script in directory
+                        <textarea autofocus readonly id="mainScript" tabindex="0" class="copy-code">                            
                         </textarea>
                     </div>
                 </div>
-                <a tabindex="0" id="endToTopBtn" href="#top">end to Top</a>
             </div>
-                <!-- ------------------------------------------------------- -->
+            <!-- ------------------------------------------------------- -->
         </main>
-        <footer>
-            <div class="code-elements-container">
-                <div class="code-container">
-                    <span>Inbox Button</span>
-                    <p>
-                        This is an &lt;a> tag inside a &div class="TK" which is the container 
-                        for each side bar a tag seen below, the below &lt;a> container is n the "TK"
-                        container seem below
-                    </p>
-                    <pre tabindex="0" class="copy-code">
-&lt;a href="https://mail.google.com/mail/u/0/#inbox" target="_top" class="J-Ke n0" aria-label="Inbox 263 unread"
-tabindex="0" draggable="false">Inbox&lt;/a></pre>
-                </div>
-                <div class="code-container">
-<textarea readonly tabindex="0" class="copy-code">
-&lt;div class="TK">
-&lt;div class="aim ain">
-    &lt;div class="TO aBP nZ aiq" id=":lg" data-tooltip="Inbox" data-tooltip-align="r"
-        jslog="36893; u014N:cOuCgd; 14:WzZd">
-        &lt;div class="TN bzz aHS-bnt" style="margin-left:0px">
-            &lt;div class="qj ">&lt;/div>
-            &lt;div class="aio UKr6le">&lt;span class="nU n1">&lt;a href="https://mail.google.com/mail/u/0/#inbox"
-                        target="_top" class="J-Ke n0" aria-label="Inbox 263 unread" tabindex="0"
-                        draggable="false">Inbox&lt;/a>&lt;/span>
-                &lt;div class="bsU">263&lt;/div>
-            &lt;/div>
-            &lt;div class="nL aif">&lt;/div>
-        &lt;/div>
-    &lt;/div>
-&lt;/div>
-&lt;div class="aim">
-    &lt;div class="TO" id=":lh" data-tooltip="Starred" data-tooltip-align="r" jslog="36893; u014N:cOuCgd; 14:WzE1XQ..">
-        &lt;div class="TN bzz aHS-bnw" style="margin-left:0px">
-            &lt;div class="qj ">&lt;/div>
-            &lt;div class="aio UKr6le">&lt;span class="nU ">&lt;a href="https://mail.google.com/mail/u/0/#starred"
-                        target="_top" class="J-Ke n0" aria-label="Starred" tabindex="-1"
-                        draggable="false">Starred&lt;/a>&lt;/span>&lt;/div>
-            &lt;div class="nL aif">&lt;/div>
-        &lt;/div>
-    &lt;/div>
-&lt;/div>
-&lt;div class="aim">
-    &lt;div class="TO" id=":li" data-tooltip="Snoozed" data-tooltip-align="r" jslog="36893; u014N:cOuCgd; 14:WzEzXQ..">
-        &lt;div class="TN bzz aHS-bu1" style="margin-left:0px">
-            &lt;div class="qj ">&lt;/div>
-            &lt;div class="aio UKr6le">&lt;span class="nU ">&lt;a href="https://mail.google.com/mail/u/0/#snoozed"
-                        target="_top" class="J-Ke n0" aria-label="Snoozed" tabindex="-1"
-                        draggable="false">Snoozed&lt;/a>&lt;/span>&lt;/div>
-            &lt;div class="nL aif">&lt;/div>
-        &lt;/div>
-    &lt;/div>
-&lt;/div>
-&lt;div class="aim">
-    &lt;div class="TO" id=":ll" data-tooltip="Sent" data-tooltip-align="r" jslog="36893; u014N:cOuCgd; 14:Wzdd">
-        &lt;div class="TN bzz aHS-bnu" style="margin-left:0px">
-            &lt;div class="qj ">&lt;/div>
-            &lt;div class="aio UKr6le">&lt;span class="nU ">&lt;a href="https://mail.google.com/mail/u/0/#sent" target="_top"
-                        class="J-Ke n0" aria-label="Sent" tabindex="-1" draggable="false">Sent&lt;/a>&lt;/span>&lt;/div>
-            &lt;div class="nL aif">&lt;/div>
-        &lt;/div>
-    &lt;/div>
-&lt;/div>
-&lt;div class="aim">
-    &lt;div class="TO" id=":ln" data-tooltip="Drafts" data-tooltip-align="r" jslog="36893; u014N:cOuCgd; 14:Wzhd">
-        &lt;div class="TN bzz aHS-bnq" style="margin-left:0px">
-            &lt;div class="qj ">&lt;/div>
-            &lt;div class="aio UKr6le">&lt;span class="nU n1">&lt;a href="https://mail.google.com/mail/u/0/#drafts"
-                        target="_top" class="J-Ke n0" aria-label="Drafts 2 unread" tabindex="-1"
-                        draggable="false">Drafts&lt;/a>&lt;/span>
-                &lt;div class="bsU">2&lt;/div>
-            &lt;/div>
-            &lt;div class="nL aif">&lt;/div>
-        &lt;/div>
-    &lt;/div>
-&lt;/div>
-&lt;/div></textarea>
-                </div>
-                <div class="code-container">
-                    <span>Gmail icon top left</span>
-                    <pre tabindex="0" class="copy-code">
-&lt;div class="gb_Ec gb_de">&lt;a class="gb_6d gb_Fc gb_9d" aria-label="Gmail" href="#inbox">&lt;img class="gb_Pd"
-src="https://ssl.gstatic.com/ui/v1/icons/mail/rfr/logo_gmail_lockup_default_1x_r5.png"
-srcset="https://ssl.gstatic.com/ui/v1/icons/mail/rfr/logo_gmail_lockup_default_1x_r5.png 1x,
-https://ssl.gstatic.com/ui/v1/icons/mail/rfr/logo_gmail_lockup_default_2x_r5.png 2x "
-alt="" aria-hidden="true" role="presentation" style="width:109px;height:40px">&lt;/a>&lt;/div></pre>
-                </div>
-                
-                
+        <div class="code-elements-container popup">
+            <img id="elementImg" src="images/01.png" alt="">
+            <!-- 1. -->
+            <div class="code-container">
+                <span>question container</span>
+                <p>
+                    NOT sure how i'm going to design this
+                </p>
+                <a class="black-click-img-box"></a>
+                <h5>selector</h5>
+                <pre data-img="images/01.png" tabindex="0" class="copy-code selector">
+html > body.srp > div.main:nth-of-type(3) > div.e9EfHf > div.Fgyi2e.rZj61.caNvfd:nth-of-type(4) > div > div.YNk70c > div.GG4mbd.P3mIxe > div.rQTE8b > div.beZ0tf.O1uzAe > div:nth-of-type(2) > a.C6AK7c > div.mXwfNd > <span class="m">span.R1QWuf</span>
+                </pre>
+                <pre data-img="images/01.png" tabindex="0" class="copy-code">
+<span class="m">span.R1QWuf</span>
+                </pre>
+                <pre data-img="images/01.png" tabindex="0" class="copy-code">
+&lt;a class="C6AK7c" aria-disabled="true" role="link" tabindex="0" data-hveid="CA8QAQ" data-ved="2ahUKEwjE4ey7xOKOAxWsFlkFHZlyNLIQ2Z0MegQIDxAB">&LT;div jsname="xBNgKe" aria-current="page" selected="" class="mXwfNd">&LT;span class="R1QWuf">All&LT;/span>&LT;/div>&LT;/a>
+                </pre>
+            </div>
+            <!-- 2. -->
+            <div class="code-container">
+                <span>question </span>
+                <p style="color:red">
+                    tbd
+                </p>
+                <a class="black-click-img-box"></a>
+                <h5>selector</h5>
+                <pre data-img="images/01.png" tabindex="0" class="copy-code selector">
 
+                </pre>
+                <pre tabindex="0" data-img="images/02.png" class="copy-code">
+&lt;div class="whitespace-pre-wrap" tabindex="-1" style="border: none;">if i open a new chat and try
+to enter number in
+the
+&lt;div contenteditable="true" translate="no" class="ProseMirror"
+data-virtualkeyboard="true"&gt;&lt;p&gt;this script is working really well but anytime
+&lt;/p&gt;&lt;/div&gt;
+&lt;/div>
+                </pre>
             </div>
             
-        </footer>
+        </div>
     </div>
     <header>
-        <a tabindex="0" id="homelink" href="../../index.html">home</a>
-        <h1>Chat Gpt - Letter Focus</h1>
-        <a tabindex="0" id="nxtBtn">next</a>
-    </header>
+        <a tabindex="0" id="homelink" href="../index.html">home</a>
+        <a tabindex="0" id="chatgpt" href="https://tylertomani.github.io/myWebSite/webPages/chatGpt-questions/index.html">chatgpt</a>
     
+    </header>
+
 </body>
+
 </html>

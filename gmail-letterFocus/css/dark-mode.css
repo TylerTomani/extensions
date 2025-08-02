@@ -34,3 +34,16 @@ h4 .dark-mode p {
 .dark-mode main>aside {
     border-right: 1px solid whitesmoke;
 }
+.dark-mode textarea {
+    background: rgb(40,38,46,.05);
+}
+
+
+
+
+
+
+
+
+
+

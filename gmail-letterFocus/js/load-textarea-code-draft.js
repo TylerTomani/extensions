@@ -1,14 +1,21 @@
 // Script Manager with Input Selection and Persistence
 // File list
+// Load saved index or default to currrent script index
+let iFile = 0
 const workingScriptInputNum = document.querySelector('#workingScriptInputNum')
-const newVersion = 'versions/new.js'
+
+
+const letterFocusAs = 'versions/letterFocus/letter-focus-temp-as.js'
+
+// .... rewriting letter focus versions putting here when done
 const workingVersion = 'versions/working-version.js'
 const draft = 'versions/draft.js'
 const draft2 = 'versions/draft2.js'
 const draftWorking = 'versions/draft-working.js'
-const navToQuestionsBookmarkFinal = '../1b-navToQuestions-bookmarks.js'
+const filesArr = [ draft, draftWorking, workingVersion]
+// const filesArr = [ letterFocusAs, draft, draftWorking, workingVersion]
 
-const filesArr = [navToQuestionsBookmarkFinal, draft2, draftWorking, workingVersion, newVersion]
+
 
 // DOM elements
 export const nxtBtn = document.querySelector('#nxtBtn')
@@ -17,44 +24,23 @@ const body = document.querySelector('body')
 export const mainScript = document.querySelector('#mainScript')
 const versionTitle = document.querySelector('#versionTitle')
 const pageHeader = document.querySelector('#pageHeader')
-export const defaultScriptInputBox = document.querySelector('#defaultScriptInputBox')
+// export const defaultScriptInputBox = document.querySelector('#defaultScriptInputBox')
 
-// Load saved index or default to 1
-// let iFile = parseInt(localStorage.getItem('defaultScriptIndex')) || 1
-let iFile =0
+
 let filePath = filesArr[iFile]
-let defaultScriptIndex
+// let defaultScriptIndex
 // DOM Ready
 addEventListener('DOMContentLoaded', () => {
     // Load the script at index
-    if (workingScriptInputNum){
-        loadTextAreaCode(filesArr[0])
-        return
-    }
+    // if (workingScriptInputNum){
+    //     loadTextAreaCode(filesArr[iFile])
+    //     return
+    // }
     loadTextAreaCode(filesArr[iFile])
     changeBackground()
 
     // Setup the input box
-    if (defaultScriptInputBox) {
-        defaultScriptInputBox.value = iFile
-        defaultScriptInputBox.min = 0
-        defaultScriptInputBox.max = filesArr.length - 1
-        defaultScriptInputBox.step = 1
-
-        // defaultScriptInputBox.addEventListener('change', () => {
-        //     const newIndex = parseInt(defaultScriptInputBox.value)
-        //     if (!isNaN(newIndex) && newIndex >= 0 && newIndex < filesArr.length) {
-        //         iFile = newIndex
-        //         localStorage.setItem('defaultScriptIndex', iFile)
-
-        //         loadTextAreaCode(filesArr[iFile])
-        //         changeBackground()
-        //     } else {
-        //         alert(`Please enter a number between 0 and ${filesArr.length - 1}`)
-        //         defaultScriptInputBox.value = iFile
-        //     }
-        // })
-    }
+    
 })
 
 // Button click/keydown for next/back
@@ -87,23 +73,27 @@ function changeScript(reverse) {
         iFile = (iFile - 1 + filesArr.length) % filesArr.length
     }
 
-    localStorage.setItem('defaultScriptIndex', iFile)
-    if (defaultScriptInputBox) defaultScriptInputBox.value = iFile
+    
     loadTextAreaCode(filesArr[iFile])
     changeBackground()
-    console.log(filesArr[iFile], iFile)
+    
 }
 
 // Color background based on current file
 function changeBackground() {
-    if (iFile <= 1) {
-        mainScript.style.background = 'rgb(3,100,22,.45)'
-    } else if (iFile === 2) {
+    if (iFile === 0) {
+        // mainScript.style.background = 'rgb(200,0,2,.75)'
+        // mainScript.style.color = 'lightgrey'
+    }else {
+        mainScript.style.color = 'black'
+        
+    }
+     if (iFile === 1) {
         mainScript.style.background = 'lightgrey'
-    } else if (iFile >=3) {
+    } else if (iFile === 2) {
         mainScript.style.background = 'rgb(14,42,47,.35)'
     } else {
-        mainScript.style.background = 'rgb(3,98,22,.25)'
+        // mainScript.style.background = 'rgb(3,100,22,.45)'
     }
 }
 

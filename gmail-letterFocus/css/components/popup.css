@@ -1,0 +1,50 @@
+
+.code-elements-container.popup {
+    max-width: 50%;
+}
+.code-elements-container.popup > .code-container > pre,
+.code-elements-container.popup > .code-container > textarea{
+    text-wrap: wrap;
+    white-space: wrap;
+}
+#elementImg {
+    z-index: 0;
+    right: 0;
+    width: 50%;
+    display: none;
+}
+
+.enlarge {
+    display: block !important;
+    z-index: 9999 !important;
+    position: fixed;
+    top: 50%;
+    /* left: 50%; */
+    max-width: 90vw;
+    max-height: 60vh;
+    transition: transform 0.2s ease;
+    /* You can't click when this is on  */
+    /* pointer-events: none; */
+    transform: translate(-50%, -50%) scale(1.5);
+    /* optional: prevents interaction while enlarged */
+}
+
+.popup {
+    position: absolute !important;
+    top: 0;
+    right: 0;
+}
+
+.black-click-img-box {
+    display: block;
+    position: absolute;
+    right: 0;
+    background-color: black;
+    height: 25px;
+        width: 35px;
+        padding: 1%;
+}
+pre.selector {
+    max-height: 40px !important;
+    background-color: lightcyan;
+}

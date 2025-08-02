@@ -7,11 +7,12 @@
     <link rel="stylesheet" href="css/footer-double-link-header.css">
     <link rel="stylesheet" href="css/drop-topic-sub-resources.css">
     <link rel="stylesheet" href="css/sub-drop-topics-container.css">
-
     <link rel="stylesheet" href="../css/dark-mode.css">
+    <link rel="stylesheet" href="css/main.css">
     <script src="../js/dark-mode.js" defer></script>
 
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <!-- <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'> -->
+    <link href='https://cdn.boxicons.com/fonts/basic/boxicons.min.css' rel='stylesheet'>
     <script src="js/dropTopics-topic-resource.js" defer></script>
     <script src="js/letterFocus-txt-nums.js" defer></script>
 </head>
@@ -49,7 +50,7 @@
                             </a>
                         </li>
                         <li>                            
-                            <a tabindex="0" id="chatgptNavFocus" class="resource" href="chatGpt-letterFocus/chatGpt-letterFocus.html">
+                            <a tabindex="0" id="chatgptNavFocus" class="resource" href="http://127.0.0.1:5500/chatGpt-navFocus/chatGpt-navFocus.html">
                             Chatgpt - navfocus
                             <img src="
                                 data:image/png;base64,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
@@ -60,15 +61,15 @@
                 </div>                
                 <!-- basics -->
                 <div class="topic-container ">
-                    <header tabindex="0" id="basics" class="drop-topic">
-                        <h3>basics</h3>
+                    <header tabindex="0" id="timers" class="drop-topic">
+                        <h3>timers</h3>
                     </header>
                     <ul class="sub-resources-container show">
                         <li>
                             <a tabindex="0" id="jsInheritance" class="resource "
-                                href="https://tylertomani.github.io/color-code-javascript/">
-                                CodeColor
-                                <img src="https://yt3.googleusercontent.com/ytc/AIdro_kG8d4F4sXkkZiWSP8eoVODSbfI-zsstG_FZdjqonlVYv4=s160-c-k-c0x00ffffff-no-rj">
+                                href="timerCalendar/timerCalendar.html">
+                                timerCalendar
+                                <i class='bxr  bx-timer'  ></i> 
                             </a>
                         </li>
                         
