@@ -1,4 +1,4 @@
-// draft - nice
+// working - version
 (() => {
   	const style = document.createElement('style');
   	style.textContent = `
@@ -30,6 +30,7 @@
     return [...document.querySelectorAll('span.R1QWuf, a.zReHs > h3, a.zReHs')]
       .map(el => {
         const span = el.tagName === 'H3' || el.tagName === 'A' ? el : null;
+        
         const link = el.closest('a.C6AK7c, [role="button"], a.zReHs');
         return link && (span?.innerText || link.innerText)?.trim()
           ? { span: span || link, link }
@@ -38,18 +39,22 @@
       .filter(Boolean)
       .filter(({ link }) => {
         const rect = link.getBoundingClientRect();
+        
         return link.offsetParent !== null && rect.width > 0 && rect.height > 0;
       });
   }
 
   document.addEventListener('keydown', (e) => {
+    console.log(e.target)
     if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA'){
 
       return;
     } 
-
+    if(e.metaKey){
+      return
+    }
+    
     const key = e.key.toLowerCase();
-    console.log(key)
     if (lastFocusedElement || (key === 'tab' || lastFocusedElement)) {
       if(lastFocusedElement) {
         lastFocusedElement.classList.remove('focused');
@@ -68,17 +73,36 @@
 
     const activeIndexMatch = matchingLinks.findIndex(obj => obj.link === currentFocusedLink);
 
-    let newIndex;
-    if (key !== lastLetterPressed) {
-      newIndex = e.shiftKey ? matchingLinks.length - 1 : 0;
-    } else {
-      newIndex =
-        activeIndexMatch === -1
-          ? (e.shiftKey ? matchingLinks.length - 1 : 0)
-          : (e.shiftKey
-              ? (activeIndexMatch - 1 + matchingLinks.length)
-              : (activeIndexMatch + 1)) % matchingLinks.length;
-    }
+	let newIndex;
+
+	if (key !== lastLetterPressed) {
+	// Find the closest match by vertical distance
+	if (currentFocusedLink) {
+		const currentTop = currentFocusedLink.getBoundingClientRect().top;
+		let closestDiff = Infinity;
+		matchingLinks.forEach(({ link }, i) => {
+		const diff = Math.abs(link.getBoundingClientRect().top - currentTop);
+		if (diff < closestDiff) {
+			closestDiff = diff;
+			newIndex = i;
+		}
+		});
+	} else {
+		// If no focus yet, default to first or last
+		newIndex = e.shiftKey ? matchingLinks.length - 1 : 0;
+	}
+	} else {
+	// Same letter pressed again → cycle
+	if (activeIndexMatch === -1) {
+		newIndex = e.shiftKey ? matchingLinks.length - 1 : 0;
+	} else {
+		newIndex = e.shiftKey
+		? (activeIndexMatch - 1 + matchingLinks.length) % matchingLinks.length
+		: (activeIndexMatch + 1) % matchingLinks.length;
+	}
+	}
+
+
 
     const newLink = matchingLinks[newIndex]?.link;
 	if (newLink) {
@@ -101,7 +125,8 @@
 		currentFocusedLink = newLink;
 		lastLetterPressed = key;
 
-		console.log('Focused:', newLink.innerText.trim());
+		// console.log('Focused:', newLink.innerText.trim());
 	}
+	console.log(e.target)
   });
 })();

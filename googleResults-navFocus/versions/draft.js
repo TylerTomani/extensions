@@ -50,7 +50,7 @@
 
       return;
     } 
-    if(e.shiftKey){
+    if(e.metaKey){
       return
     }
     
@@ -73,17 +73,36 @@
 
     const activeIndexMatch = matchingLinks.findIndex(obj => obj.link === currentFocusedLink);
 
-    let newIndex;
-    if (key !== lastLetterPressed) {
-      newIndex = e.shiftKey ? matchingLinks.length - 1 : 0;
-    } else {
-      newIndex =
-        activeIndexMatch === -1
-          ? (e.shiftKey ? matchingLinks.length - 1 : 0)
-          : (e.shiftKey
-              ? (activeIndexMatch - 1 + matchingLinks.length)
-              : (activeIndexMatch + 1)) % matchingLinks.length;
-    }
+	let newIndex;
+
+	if (key !== lastLetterPressed) {
+	// Find the closest match by vertical distance
+	if (currentFocusedLink) {
+		const currentTop = currentFocusedLink.getBoundingClientRect().top;
+		let closestDiff = Infinity;
+		matchingLinks.forEach(({ link }, i) => {
+		const diff = Math.abs(link.getBoundingClientRect().top - currentTop);
+		if (diff < closestDiff) {
+			closestDiff = diff;
+			newIndex = i;
+		}
+		});
+	} else {
+		// If no focus yet, default to first or last
+		newIndex = e.shiftKey ? matchingLinks.length - 1 : 0;
+	}
+	} else {
+	// Same letter pressed again → cycle
+	if (activeIndexMatch === -1) {
+		newIndex = e.shiftKey ? matchingLinks.length - 1 : 0;
+	} else {
+		newIndex = e.shiftKey
+		? (activeIndexMatch - 1 + matchingLinks.length) % matchingLinks.length
+		: (activeIndexMatch + 1) % matchingLinks.length;
+	}
+	}
+
+
 
     const newLink = matchingLinks[newIndex]?.link;
 	if (newLink) {
@@ -108,5 +127,6 @@
 
 		// console.log('Focused:', newLink.innerText.trim());
 	}
+	console.log(e.target)
   });
 })();
