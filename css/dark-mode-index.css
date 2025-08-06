@@ -39,3 +39,6 @@ h4 .dark-mode p {
     border: whitesmoke;
     color: white;
 }
+.dark-mode textarea{
+    color: white;
+}

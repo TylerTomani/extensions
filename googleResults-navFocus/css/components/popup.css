@@ -5,7 +5,11 @@
 .code-elements-container.popup > .code-container > pre,
 .code-elements-container.popup > .code-container > textarea{
     text-wrap: wrap;
-    white-space: wrap;
+    /* white-space: wrap; */
+}
+
+.code-elements-container.popup > .code-container > textarea.jsCode{
+    min-height: 25vh;
 }
 #elementImg {
     z-index: 0;

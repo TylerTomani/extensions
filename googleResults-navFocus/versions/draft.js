@@ -30,6 +30,7 @@
     return [...document.querySelectorAll('span.R1QWuf, a.zReHs > h3, a.zReHs')]
       .map(el => {
         const span = el.tagName === 'H3' || el.tagName === 'A' ? el : null;
+        
         const link = el.closest('a.C6AK7c, [role="button"], a.zReHs');
         return link && (span?.innerText || link.innerText)?.trim()
           ? { span: span || link, link }
@@ -38,25 +39,35 @@
       .filter(Boolean)
       .filter(({ link }) => {
         const rect = link.getBoundingClientRect();
+        
         return link.offsetParent !== null && rect.width > 0 && rect.height > 0;
       });
   }
 
   document.addEventListener('keydown', (e) => {
-    if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') return;
+    console.log(e.target)
+    if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA'){
 
+      return;
+    } 
+    if(e.shiftKey){
+      return
+    }
+    
     const key = e.key.toLowerCase();
+    if (lastFocusedElement || (key === 'tab' || lastFocusedElement)) {
+      if(lastFocusedElement) {
+        lastFocusedElement.classList.remove('focused');
+        lastFocusedElement = null;
+      }
+    }
     if (key.length !== 1 || !/^[a-z0-9]$/.test(key)) return;
 
     const allLinks = getAllLinks();
     const matchingLinks = allLinks.filter(({ span }) =>
       span.innerText.trim().toLowerCase().startsWith(key)
     );
-    console.log(key)
-    if (lastFocusedElement || key === 'tab') {
-      lastFocusedElement.classList.remove('focused');
-      lastFocusedElement = null;
-    }
+    
     if (matchingLinks.length === 0) return;
 
 
@@ -95,7 +106,7 @@
 		currentFocusedLink = newLink;
 		lastLetterPressed = key;
 
-		console.log('Focused:', newLink.innerText.trim());
+		// console.log('Focused:', newLink.innerText.trim());
 	}
   });
 })();

@@ -6,17 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>googleResults-navFocus</title>
     <link rel="stylesheet" href="css/main.css">
-    <!-- <link rel="stylesheet" href="../../css/dark-mode.css"> -->
+    <link rel="stylesheet" href="../css/dark-mode-index.css">
 
     <script type="module" src="js/letterFocus-googleResults.js" defer></script>
     <script type="module" src="js/copy-code-googleResults.js" defer></script>
-    <!-- <script type="module" src="../../../js/dark-mode.js" defer></script> -->
+    <script type="module" src="../../js/dark-mode.js" defer></script>
     <script type="module" src="js/load-textarea-code-draft.js" defer></script>
 
 </head>
 <!-- <body class="dark-mode"> -->
-
-<body class="draft">
+<body>
     <div class="page-container">
         <header>
             <h1 class="bg-version">googleResults-navFocus</h2>
@@ -49,44 +48,69 @@
                 <a class="black-click-img-box"></a>
                 <h5>selector</h5>
                 <pre data-img="images/01.png" tabindex="0" class="copy-code selector">
-html > body.srp > div.main:nth-of-type(3) > div.e9EfHf > div.Fgyi2e.rZj61.caNvfd:nth-of-type(4) > div > div.YNk70c > div.GG4mbd.P3mIxe > div.rQTE8b > div.beZ0tf.O1uzAe > div:nth-of-type(2) > a.C6AK7c > div.mXwfNd > <span class="m">span.R1QWuf</span>
+<span class="m">span.nPDzT</span>
                 </pre>
                 <pre data-img="images/01.png" tabindex="0" class="copy-code">
-<span class="m">span.R1QWuf</span>
+html > body.srp > div.main:nth-of-type(3) > div.e9EfHf > div.Fgyi2e.rZj61.caNvfd:nth-of-type(4) > div > div.YNk70c > div.GG4mbd.P3mIxe > div.rQTE8b > div.beZ0tf.O1uzAe > div:nth-of-type(2) > a.C6AK7c > div.mXwfNd > <span class="m">span.R1QWuf</span>
                 </pre>
                 <pre data-img="images/01.png" tabindex="0" class="copy-code">
 &lt;a class="C6AK7c" aria-disabled="true" role="link" tabindex="0" data-hveid="CA8QAQ" data-ved="2ahUKEwjE4ey7xOKOAxWsFlkFHZlyNLIQ2Z0MegQIDxAB">&LT;div jsname="xBNgKe" aria-current="page" selected="" class="mXwfNd">&LT;span class="R1QWuf">All&LT;/span>&LT;/div>&LT;/a>
                 </pre>
             </div>
-            <!-- 2. -->
+            <!-- 2.Get listitem  -->
             <div class="code-container">
-                <span>question </span>
+                <span> </span>
+                <p style="color:red">
+                   <span class="l"> /* I beilieve [role] is parent of R1QWuf, which is 
+           div.mTpL7c,  **/</span> see bottom video
+                </p>
+                <a class="black-click-img-box"></a>
+                <h5>selector</h5>
+                <pre data-img="images/02.png" tabindex="0" class="copy-code selector">
+<span class="m">span.R1QWuf</span>
+                </pre>
+                <textarea readonly tabindex="0" data-img="images/02.png" class="copy-code jsCode">
+&lt;span class="R1QWuf">More filters&lt;/span>
+                </textarea>
+            </div>
+            <!-- 3.   -->
+            <!-- 4.   -->
+            <div class="code-container">
                 <p style="color:red">
                     tbd
                 </p>
                 <a class="black-click-img-box"></a>
                 <h5>selector</h5>
-                <pre data-img="images/01.png" tabindex="0" class="copy-code selector">
-
+                <pre data-img="images/03.png" tabindex="0" class="copy-code selector">
+<span class="m">a.zReHs</span>
                 </pre>
-                <pre tabindex="0" data-img="images/02.png" class="copy-code">
-&lt;div class="whitespace-pre-wrap" tabindex="-1" style="border: none;">if i open a new chat and try
-to enter number in
-the
-&lt;div contenteditable="true" translate="no" class="ProseMirror"
-data-virtualkeyboard="true"&gt;&lt;p&gt;this script is working really well but anytime
-&lt;/p&gt;&lt;/div&gt;
-&lt;/div>
-                </pre>
+                <textarea readonly tabindex="0" data-img="images/03.png" class="copy-code jsCode">
+function getListItem(el) {
+    while (el && el !== document.body) {
+      if (
+        el.classList.contains('mTpL7c') ||
+        el.getAttribute('role') === 'listitem' ||
+        el.classList.contains('zReHs')
+      ) {
+        return el;
+      }
+      el = el.parentElement;
+    }
+    return null;
+  }
+                </textarea>
             </div>
             
         </div>
+        <div class="vid-container">
+            <video src="images/sr.mov"></video>
+        </div>
     </div>
-    <header>
+    <footer class="mobile-footer-header">
         <a tabindex="0" id="homelink" href="../index.html">home</a>
         <a tabindex="0" id="chatgpt" href="https://tylertomani.github.io/myWebSite/webPages/chatGpt-questions/index.html">chatgpt</a>
     
-    </header>
+    </footer>
 
 </body>
 

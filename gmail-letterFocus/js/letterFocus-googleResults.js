@@ -3,14 +3,13 @@ import { backBtn } from "./load-textarea-code-draft.js"
 const mainScript = document.querySelector('#mainScript')
 // let elementImg = document.querySelector('#elementImg')
 const homelink = document.querySelector('#homelink')
-const backToTopBtn = document.querySelector('#backToTopBtn')
 const textarea = document.querySelector('textarea')
 const codeElementsContainer = document.querySelector('.code-elements-container')
 const codeContainers = document.querySelector('.code-container')
 const btmPageCopyCodes = document.querySelectorAll('.code-elements-container .copy-code')
 const blackBoxesToggleImg = document.querySelectorAll('.black-click-img-box')
 let iCopyCodes = 0
-let elsArr = [nxtBtn, backBtn, backToTopBtn]
+let elsArr = [nxtBtn, backBtn]
 let iEl = 0
 let lastCopyCode = null
 
@@ -118,12 +117,7 @@ function focusKeyToEls(e,key) {
         console.log(homelink)
         homelink.focus()
     }
-    if (key === 'e') {
-        if (!backToTopBtn.hasAttribute('tabindex')) {
-            backToTopBtn.setAttribute('tabindex', '0')
-        }
-        backToTopBtn.focus()
-    }
+    
     if (key === 't') {
         nxtBtn.focus()
 
@@ -133,19 +127,13 @@ function focusKeyToEls(e,key) {
         index2.focus()
     }
 }
-backToTopBtn.addEventListener('keydown', e => {
-    let key = e.keyCode
-    if (key === 13) {
-        console.log(backToTopBtn)
-        backToTopBtn.click()
-    }
-})
 let elementImg; // define globally
 btmPageCopyCodes.forEach((el, index,arr) => {
     el.addEventListener('focus', e => {
         iCopyCodes = index; // ✅ Sync the index
         lastCopyCode = arr[index]
         e.target.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        console.log('skdjf')
     });
 });
 

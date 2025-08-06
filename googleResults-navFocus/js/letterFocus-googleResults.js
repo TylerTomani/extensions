@@ -3,19 +3,19 @@ import { backBtn } from "./load-textarea-code-draft.js"
 const mainScript = document.querySelector('#mainScript')
 // let elementImg = document.querySelector('#elementImg')
 const homelink = document.querySelector('#homelink')
-const backToTopBtn = document.querySelector('#backToTopBtn')
 const textarea = document.querySelector('textarea')
 const codeElementsContainer = document.querySelector('.code-elements-container')
 const codeContainers = document.querySelector('.code-container')
-const btmPageCopyCodes = document.querySelectorAll('.code-elements-container .copy-code')
+const btmPageCopyCodes = document.querySelectorAll('.code-elements-container .copy-code.selector')
 const blackBoxesToggleImg = document.querySelectorAll('.black-click-img-box')
 let iCopyCodes = 0
-let elsArr = [nxtBtn, backBtn, backToTopBtn]
+let elsArr = [nxtBtn, backBtn]
 let iEl = 0
 let lastCopyCode = null
 
 let focusedMainScript = false
 let popup = false
+let focusCodeElementsContainer = false
 textarea.addEventListener('focus', e => {
     e.target.scrollTop = 0;
 });
@@ -25,18 +25,21 @@ textarea.addEventListener('keydown', e => {
         scrollTo(0, 0)
     }
 })
-mainScript.addEventListener('focus', (e) => {
-    focusedMainScript = true
-})
+mainScript.addEventListener('focus', (e) => {focusedMainScript = true})
 mainScript.addEventListener('focusout', () => { focusedMainScript = false })
+codeElementsContainer.addEventListener('focus', (e) => {focusCodeElementsContainer = true})
+codeElementsContainer.addEventListener('focusout', () => { focusCodeElementsContainer = false })
 mainScript.addEventListener('keydown', e => { 
     let key = e.key.toLowerCase()
     if(e.shiftKey && key === 'b'){
         focusedMainScript = false
         backBtn.focus()
     }
-    if(!e.metaKey && key === 'c'){
-        btmPageCopyCodes[iEl].focus()
+    if(!e.metaKey && key === 'c' && !focusCodeElementsContainer){
+        console.log(focusCodeElementsContainer)
+        console.log(iEl)
+        btmPageCopyCodes[0].focus()
+        return
     }
 
 })
@@ -118,28 +121,15 @@ function focusKeyToEls(e,key) {
         console.log(homelink)
         homelink.focus()
     }
-    if (key === 'e') {
-        if (!backToTopBtn.hasAttribute('tabindex')) {
-            backToTopBtn.setAttribute('tabindex', '0')
-        }
-        backToTopBtn.focus()
-    }
     if (key === 't') {
         nxtBtn.focus()
-
     }
     if (key === 'i') {
         const index2 = document.querySelector('#index2')
         index2.focus()
     }
+    
 }
-backToTopBtn.addEventListener('keydown', e => {
-    let key = e.keyCode
-    if (key === 13) {
-        console.log(backToTopBtn)
-        backToTopBtn.click()
-    }
-})
 let elementImg; // define globally
 btmPageCopyCodes.forEach((el, index,arr) => {
     el.addEventListener('focus', e => {

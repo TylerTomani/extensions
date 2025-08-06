@@ -1,4 +1,4 @@
-
+// draft - working
 (() => {
   	const style = document.createElement('style');
   	style.textContent = `
@@ -38,26 +38,33 @@
       .filter(Boolean)
       .filter(({ link }) => {
         const rect = link.getBoundingClientRect();
+        // console.log(rect)
         return link.offsetParent !== null && rect.width > 0 && rect.height > 0;
       });
   }
 
   document.addEventListener('keydown', (e) => {
-    if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') return;
+    if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA'){
+
+      return;
+    } 
 
     const key = e.key.toLowerCase();
+    if (lastFocusedElement || (key === 'tab' || lastFocusedElement)) {
+      if(lastFocusedElement) {
+        lastFocusedElement.classList.remove('focused');
+        lastFocusedElement = null;
+      }
+    }
     if (key.length !== 1 || !/^[a-z0-9]$/.test(key)) return;
 
     const allLinks = getAllLinks();
     const matchingLinks = allLinks.filter(({ span }) =>
       span.innerText.trim().toLowerCase().startsWith(key)
     );
+    
     if (matchingLinks.length === 0) return;
 
-    if (lastFocusedElement) {
-      lastFocusedElement.classList.remove('focused');
-      lastFocusedElement = null;
-    }
 
     const activeIndexMatch = matchingLinks.findIndex(obj => obj.link === currentFocusedLink);
 
@@ -94,7 +101,7 @@
 		currentFocusedLink = newLink;
 		lastLetterPressed = key;
 
-		console.log('Focused:', newLink.innerText.trim());
+		// console.log('Focused:', newLink.innerText.trim());
 	}
   });
 })();
