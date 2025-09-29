@@ -52,11 +52,6 @@
   document.addEventListener('keydown', (e) => {
     
     if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA'){return;} 
-	console.log(e.target)
-	  if (e.target.classList.contains('R1QWuf')){
-		console.log('yes')
-		return
-	  }
     if(e.metaKey){return}
     
     const key = e.key.toLowerCase();

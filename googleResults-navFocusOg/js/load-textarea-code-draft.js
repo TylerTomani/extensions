@@ -3,7 +3,10 @@
 // Load saved index or default to currrent script index
 let iFile = 0
 const workingScriptInputNum = document.querySelector('#workingScriptInputNum')
+
+
 const letterFocusAs = 'versions/letterFocus/letter-focus-temp-as.js'
+
 // .... rewriting letter focus versions putting here when done
 const workingVersion = 'versions/working-version.js'
 const draft = 'versions/draft.js'
@@ -11,6 +14,8 @@ const draft2 = 'versions/draft2.js'
 const draftWorking = 'versions/draft-working.js'
 const filesArr = [ draft, draftWorking, workingVersion]
 // const filesArr = [ letterFocusAs, draft, draftWorking, workingVersion]
+
+
 
 // DOM elements
 export const nxtBtn = document.querySelector('#nxtBtn')
@@ -20,6 +25,7 @@ export const mainScript = document.querySelector('#mainScript')
 const versionTitle = document.querySelector('#versionTitle')
 const pageHeader = document.querySelector('#pageHeader')
 // export const defaultScriptInputBox = document.querySelector('#defaultScriptInputBox')
+
 
 let filePath = filesArr[iFile]
 // let defaultScriptIndex
@@ -32,22 +38,22 @@ addEventListener('DOMContentLoaded', () => {
     // }
     loadTextAreaCode(filesArr[iFile])
     changeBackground()
+
+    // Setup the input box
+    
 })
+
 // Button click/keydown for next/back
-nxtBtn.addEventListener('click', nxtScript)
-nxtBtn.addEventListener('keydown', nxtScript )
-function nxtScript(e){
-    if(e.type == 'click'){
-        e.preventDefault()
-        changeScript(0)
-        return
-    } 
-    if(e.keyCode === 13){
+nxtBtn.addEventListener('click', e => {
+    e.preventDefault()
+    changeScript(0)
+})
+nxtBtn.addEventListener('keydown', e => {
+    if (e.keyCode === 13) {
         scrollTo(0, 0)
         changeScript(0)
-        return
     }
-}
+})
 backBtn.addEventListener('click', e => {
     e.preventDefault()
     changeScript(1)
@@ -58,15 +64,19 @@ backBtn.addEventListener('keydown', e => {
         changeScript(1)
     }
 })
+
 // Script navigation
 function changeScript(reverse) {
     if (!reverse) {
         iFile = (iFile + 1) % filesArr.length
     } else {
         iFile = (iFile - 1 + filesArr.length) % filesArr.length
-    }  
+    }
+
+    
     loadTextAreaCode(filesArr[iFile])
     changeBackground()
+    
 }
 
 // Color background based on current file
@@ -76,8 +86,9 @@ function changeBackground() {
         // mainScript.style.color = 'lightgrey'
     }else {
         mainScript.style.color = 'black'
+        
     }
-    if (iFile === 1) {
+     if (iFile === 1) {
         mainScript.style.background = 'lightgrey'
     } else if (iFile === 2) {
         mainScript.style.background = 'rgb(14,42,47,.35)'
@@ -85,6 +96,7 @@ function changeBackground() {
         // mainScript.style.background = 'rgb(3,100,22,.45)'
     }
 }
+
 // Load script into textarea
 function loadTextAreaCode(filePath) {
     fetch(filePath)

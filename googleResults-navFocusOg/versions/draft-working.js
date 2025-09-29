@@ -1,4 +1,4 @@
-// draft - nice
+// draft - working
 (() => {
   	const style = document.createElement('style');
   	style.textContent = `
@@ -9,15 +9,10 @@
     	}
 	`;
 	document.head.appendChild(style);
+
 	let lastLetterPressed = null;
 	let currentFocusedLink = null;
 	let lastFocusedElement = null;
-	const googleResultsItems = document.querySelectorAll('a.zReHs')
-	let resultsItemsFocused = false
-	googleResultsItems.forEach(el => {
-		el.addEventListener('focus', () => {resultsItemsFocused = true;})
-		el.addEventListener('focusout', () => {resultsItemsFocused = false;})
-	})
 	function getListItem(el) {
     while (el && el !== document.body) {
       if (
@@ -50,14 +45,14 @@
   }
 
   document.addEventListener('keydown', (e) => {
-    
-    if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA'){return;} 
-	console.log(e.target)
-	  if (e.target.classList.contains('R1QWuf')){
-		console.log('yes')
-		return
-	  }
-    if(e.metaKey){return}
+    console.log(e.target)
+    if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA'){
+
+      return;
+    } 
+    if(e.metaKey){
+      return
+    }
     
     const key = e.key.toLowerCase();
     if (lastFocusedElement || (key === 'tab' || lastFocusedElement)) {
@@ -67,10 +62,12 @@
       }
     }
     if (key.length !== 1 || !/^[a-z0-9]$/.test(key)) return;
+
     const allLinks = getAllLinks();
     const matchingLinks = allLinks.filter(({ span }) =>
       span.innerText.trim().toLowerCase().startsWith(key)
     );
+    
     if (matchingLinks.length === 0) return;
 
 
@@ -79,46 +76,30 @@
 	let newIndex;
 
 	if (key !== lastLetterPressed) {
-		// Find the closest match by vertical distance
-		if (currentFocusedLink) {
-			const currentTop = currentFocusedLink.getBoundingClientRect().top;
-			let closestDiff = Infinity;
-			matchingLinks.forEach(({ link }, i) => {
-			const diff = Math.abs(link.getBoundingClientRect().top - currentTop);
-			if (diff < closestDiff) {
-				closestDiff = diff;
-				newIndex = i;
-			}
-			});
-		} else {
-			// If no focus yet, default to first or last
-			newIndex = e.shiftKey ? matchingLinks.length - 1 : 0;
+	// Find the closest match by vertical distance
+	if (currentFocusedLink) {
+		const currentTop = currentFocusedLink.getBoundingClientRect().top;
+		let closestDiff = Infinity;
+		matchingLinks.forEach(({ link }, i) => {
+		const diff = Math.abs(link.getBoundingClientRect().top - currentTop);
+		if (diff < closestDiff) {
+			closestDiff = diff;
+			newIndex = i;
 		}
-		} else {
-		// Same letter pressed again → cycle
-		if (activeIndexMatch === -1) {
-			newIndex = e.shiftKey ? matchingLinks.length - 1 : 0;
-		} else {
-			newIndex = e.shiftKey
-			? (activeIndexMatch - 1 + matchingLinks.length) % matchingLinks.length
-			: (activeIndexMatch + 1) % matchingLinks.length;
-		}
+		});
+	} else {
+		// If no focus yet, default to first or last
+		newIndex = e.shiftKey ? matchingLinks.length - 1 : 0;
 	}
-	console.log(resultsItemsFocused)
-	if(resultsItemsFocused){
-		/** Figure out how to use command + shift + f to go to next 
-		googleResultsItems index from current and command + shift + e
-		o go to previous*/
-		const iActiveINgoogleResultsItems = [...googleResultsItems].indexOf(e.target)
-		if(e.shiftKey && e.metaKey && key === 'f'){
-			console.log(e.target)
-			console.log(newIndex)
-			if(iActiveINgoogleResultsItems < googleResultsItems.length - 1){
-				googleResultsItems[iActiveINgoogleResultsItems + 1].focus()
-			} else {
-				googleResultsItems[0].focus()
-			}
-		}
+	} else {
+	// Same letter pressed again → cycle
+	if (activeIndexMatch === -1) {
+		newIndex = e.shiftKey ? matchingLinks.length - 1 : 0;
+	} else {
+		newIndex = e.shiftKey
+		? (activeIndexMatch - 1 + matchingLinks.length) % matchingLinks.length
+		: (activeIndexMatch + 1) % matchingLinks.length;
+	}
 	}
 
 
@@ -146,6 +127,6 @@
 
 		// console.log('Focused:', newLink.innerText.trim());
 	}
-	
+	console.log(e.target)
   });
 })();

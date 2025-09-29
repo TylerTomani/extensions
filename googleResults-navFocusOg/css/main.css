@@ -1,0 +1,26 @@
+@import url('components/popup.css');
+@import url('components/video-container.css');
+
+@import url('responsive.css');
+@import url('dark-mode.css');
+@import url('copy-code-.css');
+
+
+
+@import url('utilities/borders.css');
+@import url('utilities/colors.css');
+@import url('utilities/effects.css');
+@import url('utilities/layout.css');
+@import url('utilities/position.css');
+@import url('utilities/sizing.css');
+@import url('utilities/spacing.css');
+@import url('utilities/text.css');
+@import url('utilities/zindex.css');
+
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+}

@@ -1,0 +1,31 @@
+.r {color: tomato;}
+.m {color: magenta;}
+
+.question-answer {
+    color: white;
+}
+.question-answer>.question-txt {
+    color: black;
+}
+
+body.darkMode h2 {
+    color: white
+}
+
+
+.question-txt .text-base .code-container {
+    background-color: whitesmoke;
+    color: black;
+}
+
+.answer-txt .text-base .code-container {
+    /* border: 1px solid whitesmoke; */
+}
+
+.question-txt>.text-base .drop-question {
+    background-color: white;
+}
+.code-red{  }
+.code-grey{  }
+.code-green{  }
+.code-done{  }

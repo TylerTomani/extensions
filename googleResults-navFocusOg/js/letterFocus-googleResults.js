@@ -16,17 +16,6 @@ let lastCopyCode = null
 let focusedMainScript = false
 let popup = false
 let focusCodeElementsContainer = false
-let currentWidth = 0
-addEventListener('DOMContentLoaded', e => {
-    currentWidth = innerWidth
-    if(currentWidth < 490){
-        codeElementsContainer.classList.add('popup')
-    }
-});
-addEventListener('resize', e => {
-    currentWidth = innerWidth
-    console.log(currentWidth)
-});
 textarea.addEventListener('focus', e => {
     e.target.scrollTop = 0;
 });
@@ -65,11 +54,11 @@ addEventListener('keydown', e => {
     if (focusedMainScript && !e.shiftKey) {
         return
     }
-    console.log(key)
-    if (e.shiftKey && key === 'p' || key === 'escape' ) {
+    if (key === 'p' && e.shiftKey) {
         denlargeAllImgs()
         scrollTo(0, 0)
         codeElementsContainer.classList.toggle('popup')
+        
         console.log(lastCopyCode)
         if (!popup && lastCopyCode) {
             lastCopyCode.focus()

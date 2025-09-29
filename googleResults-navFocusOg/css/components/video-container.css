@@ -1,0 +1,9 @@
+.vid-container{
+    width: 90%;
+}
+.vid-container > video{
+    width: 100%;
+    border: 2px solid blue;
+    height: auto;
+    max-height: 400px;
+}

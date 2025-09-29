@@ -1,0 +1,14 @@
+/* .working {
+    background-color: rgb(3, 100, 22, .45) !important;
+}
+.draft {
+    background-color: rgba(47, 10, 10, 0.5) !important;
+} */
+
+.version{
+    border: 2px solid black;
+}
+
+.copy-code {
+    border: 1px solid #ccc;
+}
