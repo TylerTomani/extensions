@@ -52,8 +52,8 @@
   document.addEventListener('keydown', (e) => {
     
     if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA'){return;} 
-	console.log(e.target)
-	  if (e.target.classList.contains('R1QWuf')){
+	if (e.target.classList.contains('R1QWuf')){
+		  console.log(e.target)
 		console.log('yes')
 		return
 	  }
@@ -104,15 +104,15 @@
 			: (activeIndexMatch + 1) % matchingLinks.length;
 		}
 	}
-	console.log(resultsItemsFocused)
+	
 	if(resultsItemsFocused){
 		/** Figure out how to use command + shift + f to go to next 
 		googleResultsItems index from current and command + shift + e
 		o go to previous*/
 		const iActiveINgoogleResultsItems = [...googleResultsItems].indexOf(e.target)
 		if(e.shiftKey && e.metaKey && key === 'f'){
-			console.log(e.target)
-			console.log(newIndex)
+			
+			
 			if(iActiveINgoogleResultsItems < googleResultsItems.length - 1){
 				googleResultsItems[iActiveINgoogleResultsItems + 1].focus()
 			} else {
@@ -144,7 +144,7 @@
 		currentFocusedLink = newLink;
 		lastLetterPressed = key;
 
-		// console.log('Focused:', newLink.innerText.trim());
+		// 
 	}
 	
   });
